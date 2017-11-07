@@ -21,6 +21,22 @@ public class ArrayListSort {
 		System.out.println("After Sorting -" + list);
 		Collections.reverse(list);
 		System.out.println("After Reverse Sorting -" + list);
+		
+		removeNegative();
 	}
 
+	static void removeNegative() {
+		
+		ArrayList<ArrayList<Integer>> array =
+	            new ArrayList<ArrayList<Integer>>();
+	        for(int i=0; i<10000; i++) {
+	            try {
+	                array.add(new ArrayList<Integer>(1000000));
+	            } catch (OutOfMemoryError e) {
+	                System.out.println(i);
+	                break;
+	            }
+	        }
+	}
 }
+

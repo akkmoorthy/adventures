@@ -7,25 +7,40 @@ package com.adventures.algorithms.arrays;
 class BinarySearch {
 	// function to implement
 	// binary search
-	static int binarySearch(int arr[], int low, int high, int key) {
+	static int binarySearchRecursive(int arr[], int low, int high, int key) {
 		// If low and high are 0 then return -1
-		if (high < low)
+		if (low > high)
 			return -1;
 
 		// low is 0 and high is 6. (0 + 6 / 2) = 3
 		int mid = (low + high) / 2;
 
-		// If the key which needs to be searched is the mid of the array return
-		// that.
+		// If the key to be searched is the mid of the array return that
 		if (key == arr[mid])
 			return mid;
 
 		// If key > arr[mid] traverse above
 		if (key > arr[mid])
-			return binarySearch(arr, (mid + 1), high, key);
+			return binarySearchRecursive(arr, (mid + 1), high, key);
 
 		// If key < arr[mid] traverse lower
-		return binarySearch(arr, low, (mid - 1), key);
+		return binarySearchRecursive(arr, low, (mid - 1), key);
+	}
+
+	static int binarySearchIterative(int arr[], int low, int high, int key) {
+
+		while (low <= high) {
+			int mid = (low + high) / 2;
+			if (arr[mid] == key) {
+				return mid;
+			} else if (key > arr[mid]) {
+				low = mid + 1;
+			} else {
+				high = mid - 1;
+			}
+		}
+
+		return -1;
 	}
 
 	/* Driver program to test above function */
@@ -35,6 +50,7 @@ class BinarySearch {
 		n = arr.length;
 		key = 15;
 
-		System.out.println("Index: " + binarySearch(arr, 0, n, key));
+		System.out.println("Search using Iterative: Index: " + binarySearchIterative(arr, 0, n-1, key));
+		System.out.println("Search using Recursive: Index: " + binarySearchRecursive(arr, 0, n-1, key));
 	}
 }
