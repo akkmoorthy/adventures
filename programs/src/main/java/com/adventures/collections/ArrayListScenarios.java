@@ -6,7 +6,6 @@ import java.util.List;
 public class ArrayListScenarios {
 
 	public static void main(String[] args) {
-
 		listWithoutGeneric();
 		listWithGeneric();
 	}
