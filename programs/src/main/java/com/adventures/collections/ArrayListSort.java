@@ -8,7 +8,7 @@ public class ArrayListSort {
 
 	public static void main(String[] args) {
 
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<String>();
 		list.add("Anil");
 		list.add("Fahad");
 		list.add("Charan");

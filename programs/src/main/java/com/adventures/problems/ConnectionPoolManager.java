@@ -9,7 +9,7 @@ class ConnectionPoolManager {
 	String userName = "root";
 	String password = "root123";
 
-	List<Connection> connectionPool = new ArrayList<>();
+	List<Connection> connectionPool = new ArrayList<Connection>();
 
 	public ConnectionPoolManager() {
 		initialize();
@@ -87,7 +87,11 @@ class ConnectionPoolManager {
 	}
 
 	public static void main(String args[]) {
-		ConnectionPoolManager ConnectionPoolManager = new ConnectionPoolManager();
+		ConnectionPoolManager connectionPoolManager = new ConnectionPoolManager();
+
+		for (int i = 0; i < 8; i++) {
+			System.out.println(connectionPoolManager.getConnectionFromPool());
+		}
 	}
 
 }

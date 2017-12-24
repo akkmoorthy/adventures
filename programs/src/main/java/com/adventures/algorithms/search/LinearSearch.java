@@ -1,4 +1,4 @@
-package com.adventures.algorithms.arrays;
+package com.adventures.algorithms.search;
 
 //Java program to implement linear 
 //search in unsorted arrays

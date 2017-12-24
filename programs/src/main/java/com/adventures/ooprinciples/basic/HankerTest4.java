@@ -18,7 +18,7 @@ public class HankerTest4 {
 	static long calculateAmount(int[] prices) {
 		long totalPrice = 0;
 		if (prices.length > 0) {
-			List<Integer> minValue = new ArrayList<>();
+			List<Integer> minValue = new ArrayList<Integer>();
 
 			for (int i = 0; i < prices.length; i++) {
 				if (i == 0) {

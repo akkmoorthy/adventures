@@ -1,4 +1,4 @@
-package com.adventures.algorithms.arrays;
+package com.adventures.algorithms.search;
 
 //Java program to implement binary search in a sorted array
 //Worst Case - O(log n)
@@ -48,7 +48,7 @@ class BinarySearch {
 		int arr[] = { 5, 6, 7, 8, 9, 10 };
 		int n, key;
 		n = arr.length;
-		key = 15;
+		key = 10;
 
 		System.out.println("Search using Iterative: Index: " + binarySearchIterative(arr, 0, n-1, key));
 		System.out.println("Search using Recursive: Index: " + binarySearchRecursive(arr, 0, n-1, key));

@@ -17,36 +17,31 @@ class FindDuplicate {
 		}
 	}
 
-	void printRepeating( int arr[], int n)
-	{
-	    // First check all the values that are
-	    // present in an array then go to that
-	    // values as indexes and increment by
-	    // the size of array
-	    for (int i = 0; i < n; i++)
-	    {
-	        int index = arr[i] % n;
-	        arr[index] += n;
-	    }
-	 
-	    // Now check which value exists more
-	    // than once by dividing with the size
-	    // of array
-	    for (int i = 0; i < n; i++)
-	    {
-	        if ((arr[i]/n) > 1)
-	        	System.out.print(i + " ");
-	    }
+	void printRepeating(int arr[], int n) {
+		// First check all the values that are
+		// present in an array then go to that
+		// values as indexes and increment by the size of array
+		for (int i = 0; i < n; i++) {
+			int index = arr[i] % n;
+			arr[index] += n;
+		}
+
+		// Now check which value exists more
+		// than once by dividing with the size of array
+		for (int i = 0; i < n; i++) {
+			if ((arr[i] / n) > 1)
+				System.out.print(i + " ");
+		}
 	}
-	
+
 	/* Driver program to test the above function */
 	public static void main(String[] args) {
 		FindDuplicate duplicate = new FindDuplicate();
-		int arr[] = {1, 6, 3, 1, 3, 6, 6};
+		int arr[] = { 1, 6, 3, 1, 3, 6, 6 };
 		System.out.println("\nUsing ABS: ");
 		duplicate.printRepeatingUsingAbs(arr, arr.length);
-		
-		int array[] = {1, 6, 3, 1, 3, 6, 6};
+
+		int array[] = { 1, 6, 3, 1, 3, 6, 6 };
 		System.out.println("\nUsing Another Method: ");
 		duplicate.printRepeating(array, array.length);
 	}

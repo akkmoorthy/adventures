@@ -4,8 +4,7 @@ package com.adventures.algorithms.arrays;
 //operation in an unsorted array
 
 class DeleteOperationInUnSortedArray {
-	// function to search a key to
-	// be deleted
+	// function to search a key to be deleted
 	static int findElement(int arr[], int n, int key) {
 		int i;
 		for (i = 0; i < n; i++)

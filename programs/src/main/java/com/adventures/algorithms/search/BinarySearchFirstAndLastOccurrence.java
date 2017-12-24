@@ -1,4 +1,4 @@
-package com.adventures.algorithms.arrays;
+package com.adventures.algorithms.search;
 
 //Java program to implement binary search in a sorted array
 //Worst Case - O(log n)
