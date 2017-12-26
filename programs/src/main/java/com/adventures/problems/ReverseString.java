@@ -10,12 +10,14 @@ public class ReverseString {
 		String toReverse = scanner.nextLine();
 
 		System.out.println("To reverse: " + toReverse);
+		inPlaceReverse(toReverse);
+		
 		// Reverse the string using charAt string method
 		reverseUsingCharAt(toReverse);
 
 		// Reverse the string using ToCharArray string method
 		reverseUsingToCharArray(toReverse);
-		
+
 		// Reverse the string using string buffer reverse method
 		reverseUsingStringBufferReverseMethod(toReverse);
 
@@ -23,6 +25,19 @@ public class ReverseString {
 		System.out.println("Reversed String using recursive Method: " + reverseRecursively(toReverse));
 
 		scanner.close();
+	}
+
+	public static void inPlaceReverse(final String input) {
+		final StringBuilder builder = new StringBuilder(input);
+		int length = builder.length();
+		for (int i = 0; i < length / 2; i++) {
+			final char current = builder.charAt(i);
+			final int otherEnd = length - i - 1;
+			builder.setCharAt(i, builder.charAt(otherEnd));
+			// swap
+			builder.setCharAt(otherEnd, current);
+		}
+		System.out.println("Reversed String using inPlaceReverse Method: " + builder.toString());
 	}
 
 	private static void reverseUsingCharAt(String toReverse) {
