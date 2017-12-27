@@ -13,6 +13,7 @@ public class SwapNodes {
 		}
 	}
 
+	
 	public static void main(String[] args) {
 		push(14);
 		push(20);
