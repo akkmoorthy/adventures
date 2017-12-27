@@ -63,19 +63,20 @@ public class NodeDeletionLinkedList {
 			return;
 		}
 
-		// Find previous node of the node to be deleted
-		for (int i = 0; tempNode != null && i < position - 1; i++)
+		Node previousNode = null;
+		int count = 0;
+		while (tempNode != null && count != position) {
+			previousNode = tempNode;
 			tempNode = tempNode.next;
+			count++;
+		}
 
-		// If position is more than number of nodes
-		if (tempNode == null || tempNode.next == null)
+		// If key was not present in linked list
+		if (tempNode == null)
 			return;
 
-		// Node temp->next is the node to be deleted
-		// Store pointer to the next of node to be deleted
-		Node next = tempNode.next.next;
-
-		tempNode.next = next; // Unlink the deleted node from list
+		// Unlink the node from linked list
+		previousNode.next = tempNode.next;
 	}
 
 	public void printList() {

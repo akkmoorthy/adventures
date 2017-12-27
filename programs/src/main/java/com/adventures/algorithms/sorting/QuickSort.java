@@ -6,7 +6,7 @@ public class QuickSort {
 
 	public static void main(String args[]) {
 		// unsorted integer array
-		int[] unsorted = { 6, 5, 3, 1, 8, 7, 2, 4 };
+		int[] unsorted = { 8, 6, 4, 2, 0 };
 		System.out.println("Unsorted array :" + Arrays.toString(unsorted));
 		sort(unsorted);
 		System.out.println("Sorted array :" + Arrays.toString(unsorted));

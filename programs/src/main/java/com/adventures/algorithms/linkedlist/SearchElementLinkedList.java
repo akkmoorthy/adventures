@@ -74,6 +74,6 @@ public class SearchElementLinkedList {
 		llist.printList();
 		System.out.println("\nFound at position using Iterative method: " + llist.searchIterative(6));
 
-		System.out.println("\nFound at position  using Recursive method: " + llist.searchRecursive(llist.head, 5, 0));
+		System.out.println("\nFound at position  using Recursive method: " + llist.searchRecursive(llist.head, 4, 1));
 	}
 }
