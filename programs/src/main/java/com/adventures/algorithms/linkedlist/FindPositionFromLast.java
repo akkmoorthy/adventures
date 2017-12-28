@@ -1,7 +1,5 @@
 package com.adventures.algorithms.linkedlist;
 
-import com.adventures.algorithms.linkedlist.PrintMiddle.Node;
-
 public class FindPositionFromLast {
 
 	Node head; // head of the list
