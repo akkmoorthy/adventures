@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class StackUsingArray {
 	private static int MAX = 2;
 	private int[] arr = new int[MAX];
-	private int top = -1;
+	private int top = 0;
 
 	private boolean push(int x) {
 		System.out.println("top = " + top);
@@ -13,7 +13,8 @@ public class StackUsingArray {
 			System.out.println("Stack Overflow");
 			return false;
 		}
-		arr[++top] = x;
+		arr[top] = x;
+		top++;
 		return true;
 	}
 
@@ -22,7 +23,7 @@ public class StackUsingArray {
 			System.out.println("Stack Underflow");
 			return 0;
 		}
-		return arr[top--];
+		return arr[--top];
 	}
 
 	public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class StackUsingArray {
 
 		System.out.println(Arrays.toString(stackUsingArray.arr));
 
-		System.out.println(stackUsingArray.pop());
-		stackUsingArray.pop();
+		System.out.println("Pop: " + stackUsingArray.pop());
+		System.out.println("Pop: " + stackUsingArray.pop());
 	}
 }
