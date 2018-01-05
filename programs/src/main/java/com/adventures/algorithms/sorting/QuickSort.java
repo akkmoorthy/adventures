@@ -39,8 +39,6 @@ public class QuickSort {
 				i++;
 				j--;
 			}
-
-			System.out.println("After Swapping :" + Arrays.toString(input));
 		}
 		// calls quickSort() method recursively
 		if (low < j) {
