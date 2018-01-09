@@ -3,17 +3,6 @@ package com.adventures.algorithms.linkedlist;
 public class PrintMiddle {
 	Node head; // head of linked list
 
-	/* Linked list node */
-	class Node {
-		int data;
-		Node next;
-
-		Node(int d) {
-			data = d;
-			next = null;
-		}
-	}
-
 	/* Function to print middle of linked list */
 	void printMiddle() {
 		Node slow_ptr = head;

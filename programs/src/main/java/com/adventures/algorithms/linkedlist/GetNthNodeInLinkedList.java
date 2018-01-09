@@ -5,16 +5,6 @@ package com.adventures.algorithms.linkedlist;
 class GetNthNodeInLinkedList {
 	Node head; // the head of list
 
-	class Node {
-		int data;
-		Node next;
-
-		Node(int d) {
-			data = d;
-			next = null;
-		}
-	}
-
 	/* Takes index as argument and return data at index */
 	public int GetNth(int index) {
 		Node current = head;

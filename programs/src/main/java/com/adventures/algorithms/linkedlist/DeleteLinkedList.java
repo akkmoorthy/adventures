@@ -3,17 +3,6 @@ package com.adventures.algorithms.linkedlist;
 public class DeleteLinkedList {
 	Node head; // head of the list
 
-	/* Linked List node */
-	class Node {
-		int data;
-		Node next;
-
-		Node(int d) {
-			data = d;
-			next = null;
-		}
-	}
-
 	/* Function deletes the entire linked list */
 	void deleteList() {
 		head = null;

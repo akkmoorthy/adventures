@@ -1,56 +1,29 @@
 package com.adventures.algorithms.linkedlist;
 
 public class SwapNodes {
-	private static Node head;
+	private Node head;
 
-	static class Node {
-		int data;
-		Node next;
-
-		Node(int data) {
-			this.data = data;
-			this.next = null;
-		}
-	}
-
-	
 	public static void main(String[] args) {
-		push(14);
-		push(20);
-		push(13);
-		push(12);
-		push(15);
-		push(10);
+		SwapNodes llist = new SwapNodes();
+		llist.push(14);
+		llist.push(20);
+		llist.push(13);
+		llist.push(12);
+		llist.push(15);
+		llist.push(10);
 
 		System.out.print("Before Swapping: ");
-		printList();
+		llist.printList();
 
 		// swapNodesMethod2(12, 20);
 
-		swapNodesMethod1(12, 20);
+		llist.swapNodesMethod1(12, 20);
 
 		System.out.print("\nAfter Swapping: ");
-		printList();
-		
-		printMiddle();
+		llist.printList();
+
 	}
 
-	static void printMiddle()
-    {
-        Node slow_ptr = head;
-        Node fast_ptr = head;
-        if (head != null)
-        {
-            while (fast_ptr != null && fast_ptr.next != null)
-            {
-                fast_ptr = fast_ptr.next.next;
-                slow_ptr = slow_ptr.next;
-            }
-            System.out.println("\nThe middle element is [" +
-                                slow_ptr.data + "] \n");
-        }
-    }
-	
 	// private static void swapNodesMethod2(int x, int y) {
 	// if (head == null || head.next == null) {
 	// return;
@@ -79,13 +52,13 @@ public class SwapNodes {
 	// swap(nodeX.next, nodeY.next);
 	// }
 
-	private static void swap(Node nodeX, Node nodeY) {
+	private void swap(Node nodeX, Node nodeY) {
 		Node tmpNode = nodeX;
 		nodeX = nodeY;
 		nodeY = tmpNode;
 	}
 
-	private static void swapNodesMethod1(int x, int y) {
+	private void swapNodesMethod1(int x, int y) {
 		if (head == null || head.next == null) {
 			return;
 		}
@@ -126,7 +99,7 @@ public class SwapNodes {
 		currY.next = temp;
 	}
 
-	private static void push(int data) {
+	private void push(int data) {
 		if (head == null) {
 			head = new Node(data);
 			return;
@@ -137,7 +110,7 @@ public class SwapNodes {
 		head = newNode;
 	}
 
-	private static void printList() {
+	private void printList() {
 		if (head == null) {
 			return;
 		}

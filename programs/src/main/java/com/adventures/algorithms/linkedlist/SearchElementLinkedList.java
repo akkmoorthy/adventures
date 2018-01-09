@@ -1,17 +1,6 @@
 package com.adventures.algorithms.linkedlist;
 
 public class SearchElementLinkedList {
-	/* Linked list Node */
-	class Node {
-		int data;
-		Node next;
-
-		// Constructor to create a new node
-		Node(int d) {
-			data = d;
-		}
-	}
-
 	Node head; // head of list
 
 	/* Inserts a new Node at front of the list. */

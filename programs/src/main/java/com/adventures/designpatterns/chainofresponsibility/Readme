@@ -1,0 +1,20 @@
+Intent
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the 
+receiving objects and pass the request along the chain until an object handles it.
+Launch-and-leave requests with a single processing pipeline that contains many possible handlers.
+An object-oriented linked list with recursive traversal.
+
+Advantages of Chain of Responsibility Design Pattern
+To reduce the coupling degree. Decoupling it will request the sender and receiver.
+Simplified object. The object does not need to know the chain structure.
+Enhance flexibility of object assigned duties. By changing the members within the chain or change their order, allow dynamic adding or deleting responsibility.
+Increase the request processing new class of very convenient.
+DisAdvantages of Chain of Responsibility Design Pattern
+
+The request must be received not guarantee.
+The performance of the system will be affected, but also in the code debugging is not easy may cause cycle call.
+It may not be easy to observe the characteristics of operation, due to debug.
+
+Used in Java API: 
+java.util.logging.Logger#log()
+javax.servlet.Filter#doFilter()

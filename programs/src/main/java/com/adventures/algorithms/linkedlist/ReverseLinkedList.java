@@ -31,7 +31,7 @@ public class ReverseLinkedList {
 		return node;
 	}
 
-	// prints content of double linked list
+	// prints content of linked list
 	void printList(Node node) {
 		while (node != null) {
 			System.out.print(node.data + " ");

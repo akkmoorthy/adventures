@@ -4,17 +4,6 @@ public class FindPositionFromLast {
 
 	Node head; // head of the list
 
-	/* Linked List node */
-	class Node {
-		int data;
-		Node next;
-
-		Node(int d) {
-			data = d;
-			next = null;
-		}
-	}
-
 	/*
 	 * This function prints contents of linked list starting from the given node
 	 */

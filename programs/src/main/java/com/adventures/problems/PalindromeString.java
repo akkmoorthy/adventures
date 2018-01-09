@@ -2,10 +2,29 @@ package com.adventures.problems;
 
 public class PalindromeString {
 	public static void main(String args[]) {
+		System.out.println("Is aaa palindrom?: " + isPalindromUsingCharAt("aaa"));
+		System.out.println("Is abca palindrom?: " + isPalindromUsingCharAt("abca"));
+		System.out.println("Is bbbb palindrom?: " + isPalindromUsingCharAt("bbbb"));
+		System.out.println("Is defg palindrom?: " + isPalindromUsingCharAt("defg"));
+
 		System.out.println("Is aaa palindrom?: " + isPalindromString("aaa"));
 		System.out.println("Is abc palindrom?: " + isPalindromString("abc"));
 		System.out.println("Is bbbb palindrom?: " + isPalindromString("bbbb"));
 		System.out.println("Is defg palindrom?: " + isPalindromString("defg"));
+	}
+
+	public static boolean isPalindromUsingCharAt(String input) {
+		if (input == null || input.isEmpty()) {
+			return false;
+		}
+
+		int length = input.length();
+
+		for (int i = 0; i < length / 2; i++) {
+			if (input.charAt(i) != input.charAt(length - 1 - i))
+				return false;
+		}
+		return true;
 	}
 
 	/**

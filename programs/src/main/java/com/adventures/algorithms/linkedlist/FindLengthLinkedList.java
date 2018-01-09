@@ -1,18 +1,7 @@
 package com.adventures.algorithms.linkedlist;
 
 public class FindLengthLinkedList {
-	
-	/* Linked list Node */
-	class Node {
-		int data;
-		Node next;
 
-		// Constructor to create a new node
-		Node(int d) {
-			data = d;
-		}
-	}
-	
 	Node head; // head of list
 
 	/* Inserts a new Node at front of the list. */
@@ -50,17 +39,17 @@ public class FindLengthLinkedList {
 		llist.push(1);
 
 		System.out.println("Count of nodes using Iterative method is " + llist.getCountIterative());
-		
+
 		llist.push(1);
 		System.out.println("Count of nodes using Recursive method is " + llist.getCount());
 	}
-	
+
 	public int getCount() {
 		return getCountRecursive(head);
 	}
-	
+
 	public int getCountRecursive(Node node) {
-		if (node == null ) {
+		if (node == null) {
 			return 0;
 		}
 

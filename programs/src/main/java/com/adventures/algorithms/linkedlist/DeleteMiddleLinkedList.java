@@ -3,17 +3,6 @@ package com.adventures.algorithms.linkedlist;
 public class DeleteMiddleLinkedList {
 	Node head; // head of list
 
-	/* Linked list Node */
-	class Node {
-		int data;
-		Node next;
-
-		Node(int d) {
-			data = d;
-			next = null;
-		}
-	}
-
 	/* Inserts a new Node at front of the list. */
 	public void push(int data) {
 		Node newNode = new Node(data);

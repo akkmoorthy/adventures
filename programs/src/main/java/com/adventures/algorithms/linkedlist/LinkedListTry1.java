@@ -3,15 +3,6 @@ package com.adventures.algorithms.linkedlist;
 public class LinkedListTry1 {
 	Node head;
 
-	class Node {
-		int data;
-		Node next;
-
-		Node(int data) {
-			this.data = data;
-		}
-	}
-
 	void insertFront(int data) {
 		Node newNode = new Node(data);
 		newNode.next = head;
