@@ -1,6 +1,5 @@
 package com.adventures.problems;
 
-import org.springframework.util.StringUtils;
 import java.util.Scanner;
 
 public class CountCharactersInString {
@@ -21,9 +20,9 @@ public class CountCharactersInString {
 	private static void countUsingSpringStringUtils(String str, char search) {
 		// Using Spring framework StringUtils class for finding occurrence of
 		// another String
-		int count = StringUtils.countOccurrencesOf(str, String.valueOf(search));
+//		int count = StringUtils.countOccurrencesOf(str, String.valueOf(search));
 
-		System.out.printf("The character %c is found %d times in the %s\n", search, count, str);
+//		System.out.printf("The character %c is found %d times in the %s\n", search, count, str);
 	}
 
 	private static void countUsingForLoop(String str, char search) {

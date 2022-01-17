@@ -27,7 +27,7 @@ public class SwapNodesTry {
 
 		// swapNodesMethod2(12, 20);
 
-		swapNodesMethod1(12, 20);
+//		swapNodesMethod1(12, 20);
 
 		System.out.print("\nAfter Swapping: ");
 		printList();

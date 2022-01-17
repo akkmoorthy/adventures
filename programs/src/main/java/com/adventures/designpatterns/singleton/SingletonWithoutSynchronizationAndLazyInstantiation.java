@@ -9,7 +9,7 @@ package com.adventures.designpatterns.singleton;
 
 //Cons:
 //Every time a condition of null has to be checked.
-//instance can’t be accessed directly.
+//instance cannot be accessed directly.
 //In multithreaded environment, it may break singleton property.
 class Singleton {
 	// static variable single_instance of type Singleton
