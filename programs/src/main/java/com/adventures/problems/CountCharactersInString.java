@@ -15,6 +15,7 @@ public class CountCharactersInString {
 		countUsingForLoop(str, search);
 		countUsingEnhancedForLoop(str, search);
 		countUsingSpringStringUtils(str, search);
+		countOccurrencesOfACertainCharacter(str, search);
 	}
 
 	private static void countUsingSpringStringUtils(String str, char search) {
@@ -44,6 +45,15 @@ public class CountCharactersInString {
 			}
 		}
 
+		System.out.printf("The character %c is found %d times in the %s\n", search, count, str);
+	}
+
+	public static void countOccurrencesOfACertainCharacter(
+			String str, char search) {
+
+		long count = str.chars()
+				.filter(c -> c == search)
+				.count();
 		System.out.printf("The character %c is found %d times in the %s\n", search, count, str);
 	}
 }
