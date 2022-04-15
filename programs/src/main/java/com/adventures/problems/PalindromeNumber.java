@@ -2,6 +2,7 @@ package com.adventures.problems;
 
 import java.util.Scanner;
 
+//Time Complexity: If D is no. of digits then it is theta(D)
 public class PalindromeNumber {
 
 	public static void main(String[] args) {
@@ -15,7 +16,8 @@ public class PalindromeNumber {
 
 		int reversedNumber = 0;
 		while (n > 0) {
-			reversedNumber = (reversedNumber * 10) + (n % 10);
+			int lastDigit = (n % 10);
+			reversedNumber = (reversedNumber * 10) + lastDigit;
 			n = n / 10;
 		}
 

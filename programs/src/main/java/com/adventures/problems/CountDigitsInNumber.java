@@ -2,6 +2,7 @@ package com.adventures.problems;
 
 import java.util.Scanner;
 
+//Time Complexity: If D is no. of digits then it is theta(D)
 public class CountDigitsInNumber {
 
 	public static void main(String[] args) {

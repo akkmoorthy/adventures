@@ -16,14 +16,16 @@ public class FactorialNumber {
 
 	}
 
+	//Time Complexity: If D is no. of digits then it is theta(n) and theta(n) auxiliary space hence iterative is better
 	private static int factorialWithRecursion(int number) {
 		if (number == 0) {
 			return 1;
 		} else {
-			return factorialWithRecursion((number - 1)) * number;
+			return number * factorialWithRecursion((number - 1));
 		}
 	}
 
+	//Time Complexity: If D is no. of digits then it is O(n)
 	private static void factorialWithoutRecursion(int number) {
 		int factorial = 1;
 		while (number > 0) {
